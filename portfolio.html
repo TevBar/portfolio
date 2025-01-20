@@ -10,104 +10,215 @@
     <!-- Custom CSS -->
     <style>
         /* General Body Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5dc; /* Tan background color */
-            margin-left: 0;
-            padding: 20px;
-            color: #333;
-        }
+        /* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5dc; /* Tan background color */
+    margin-left: 0;
+    padding: 20px;
+    color: #333;
+}
 
-        /* Sidebar Styles */
-        #sidebar {
-            width: 250px;
-            transition: width 0.3s ease;
-            position: fixed;
-            height: 100%;
-            left: 0;
-            top: 0;
-            padding-top: 20px;
-            background-color: #343a40; /* Dark background for sidebar */
-            color: white;
-        }
+/* Heading Styles */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
 
-        #sidebar .list-group-item {
-            color: white;
-            background-color: #343a40;
-            border: none;
-            font-size: 18px;
-            padding: 15px 20px;
-        }
+/* Sidebar Styles */
+#sidebar {
+    width: 250px;
+    transition: width 0.3s ease;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    background-color: #343a40; /* Dark background for sidebar */
+    color: white;
+}
 
-        #sidebar .list-group-item:hover,
-        #sidebar .list-group-item:focus {
-            background-color: #495057; /* Darker background when hovering */
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+#sidebar .list-group-item {
+    color: white;
+    background-color: #343a40;
+    border: none;
+    font-size: 18px;
+    padding: 15px 20px;
+}
 
-        #sidebar .list-group-item-action:active {
-            background-color: #495057; /* Dark background on active state */
-        }
+#sidebar .list-group-item:hover,
+#sidebar .list-group-item:focus {
+    background-color: #495057; /* Darker background when hovering */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        /* Main Content Area Styles */
-        #page-content-wrapper {
-            margin-left: 250px;
-            padding-top: 20px;
-        }
+#sidebar .list-group-item-action:active {
+    background-color: #495057; /* Dark background on active state */
+}
 
-        /* Fade-in Section Styles */
-        .fade-section {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
+/* Main Content Area Styles */
+#page-content-wrapper {
+    margin-left: 250px;
+    padding-top: 20px;
+}
 
-        .fade-section:target {
-            opacity: 1;
-        }
+/* Fade-in Section Styles */
+.fade-section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
 
-        /* Heading Styles */
-        h1,
-        h2 {
-            color: #333;
-        }
+.fade-section:target {
+    opacity: 1;
+}
 
-        /* Project Section Styling */
-        .project {
-            margin-bottom: 30px;
-        }
+/* Profile Picture Styles */
+.profile-pic {
+    border-radius: 50%;
+    max-width: 150px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        .project img {
-            max-width: 100%;
-            height: auto;
-        }
+/* Home Section Styles */
+#home {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient effect */
+    padding: 60px 0;
+    color: white;
+    text-align: center;
+}
 
-        /* Profile picture */
-        .profile-pic {
-            border-radius: 50%;
-            max-width: 150px;
-        }
+/* About Me Section Styles */
+#about {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-        /* Responsive Design for Sidebar */
-        @media (max-width: 768px) {
-            #sidebar {
-                width: 100%;
-            }
+.about-item {
+    flex: 1;
+    margin: 10px;
+}
 
-            #page-content-wrapper {
-                margin-left: 0;
-            }
-        }
+#about p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
 
-        /* Link styles */
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+/* Skills Section Layout */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
 
-        a:hover {
-            color: #007bff; /* Change color on hover */
-        }
+#skills li:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+/* Project Section Styles */
+.project {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Button and Link Styles */
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* Contact Form Styles */
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design for Sidebar and Main Content */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        position: static;
+        padding-top: 10px;
+    }
+
+    #page-content-wrapper {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .profile-pic {
+        max-width: 120px;
+    }
+}
+
+/* Organizing CSS: Mobile first styles */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    #page-content-wrapper {
+        margin-left: 0;
+    }
+}
+
     </style>
 </head>
 
@@ -131,9 +242,9 @@
                 <!-- Home Section -->
                 <section id="home" class="fade-section mt-5">
                     <h1>Welcome to My Portfolio</h1>
-                    <p>Hi! I'm [Your Name], a passionate developer...</p>
+                    <p>Hi! I'm Tevin, a passionate developer...</p>
                     <!-- Profile Picture -->
-                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+                    <img src="image/download.jpeg" alt="Profile Picture" class="profile-pic">
                 </section>
 
                 <!-- About Me Section -->
